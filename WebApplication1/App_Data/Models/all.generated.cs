@@ -6,7 +6,7 @@ using  Umbraco.Core.Models;
 using  Umbraco.Core.Models.PublishedContent;
 using  Umbraco.Web;
 using  Umbraco.ModelsBuilder.Embedded;
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "a48f8170a2a049cc")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "6054f97a4dcec818")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -623,6 +623,13 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.2")]
 		[ImplementPropertyType("sitename")]
 		public string Sitename => this.Value<string>("sitename");
+
+		///<summary>
+		/// Welcome Text: Write a nice introduction so the visitors feel welcome
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.2")]
+		[ImplementPropertyType("welcomeText")]
+		public string WelcomeText => this.Value<string>("welcomeText");
 	}
 
 	/// <summary>Feature</summary>
@@ -963,6 +970,39 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.2")]
 		[ImplementPropertyType("umbracoNavihide")]
 		public bool UmbracoNavihide => global::Umbraco.Web.PublishedModels.NavigationBase.GetUmbracoNavihide(this);
+	}
+
+	/// <summary>Home Page</summary>
+	[PublishedModel("homePage")]
+	public partial class HomePage : PublishedContentModel
+	{
+		// helpers
+#pragma warning disable 0109 // new is redundant
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.2")]
+		public new const string ModelTypeAlias = "homePage";
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.2")]
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.2")]
+		public new static IPublishedContentType GetModelContentType()
+			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.2")]
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<HomePage, TValue>> selector)
+			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+#pragma warning restore 0109
+
+		// ctor
+		public HomePage(IPublishedContent content)
+			: base(content)
+		{ }
+
+		// properties
+
+		///<summary>
+		/// Welcome Text: Write a nice introduction text so the visitors feel welcome
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.2")]
+		[ImplementPropertyType("welcomeText")]
+		public string WelcomeText => this.Value<string>("welcomeText");
 	}
 
 	/// <summary>Folder</summary>
