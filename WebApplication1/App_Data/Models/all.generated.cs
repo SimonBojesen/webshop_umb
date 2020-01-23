@@ -6,7 +6,7 @@ using  Umbraco.Core.Models;
 using  Umbraco.Core.Models.PublishedContent;
 using  Umbraco.Web;
 using  Umbraco.ModelsBuilder.Embedded;
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "6054f97a4dcec818")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "b82003f93f431c3")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -1005,6 +1005,79 @@ namespace Umbraco.Web.PublishedModels
 		public string WelcomeText => this.Value<string>("welcomeText");
 	}
 
+	/// <summary>SubContent</summary>
+	[PublishedModel("subContent")]
+	public partial class SubContent : PublishedContentModel
+	{
+		// helpers
+#pragma warning disable 0109 // new is redundant
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.2")]
+		public new const string ModelTypeAlias = "subContent";
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.2")]
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.2")]
+		public new static IPublishedContentType GetModelContentType()
+			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.2")]
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<SubContent, TValue>> selector)
+			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+#pragma warning restore 0109
+
+		// ctor
+		public SubContent(IPublishedContent content)
+			: base(content)
+		{ }
+
+		// properties
+
+		///<summary>
+		/// HyperLinkPic: Link Picture
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.2")]
+		[ImplementPropertyType("hyperLinkText")]
+		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent HyperLinkText => this.Value<global::Umbraco.Core.Models.PublishedContent.IPublishedContent>("hyperLinkText");
+
+		///<summary>
+		/// Link: Link
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.2")]
+		[ImplementPropertyType("link")]
+		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent Link => this.Value<global::Umbraco.Core.Models.PublishedContent.IPublishedContent>("link");
+	}
+
+	/// <summary>LinkTesting</summary>
+	[PublishedModel("asd")]
+	public partial class Asd : PublishedContentModel
+	{
+		// helpers
+#pragma warning disable 0109 // new is redundant
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.2")]
+		public new const string ModelTypeAlias = "asd";
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.2")]
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.2")]
+		public new static IPublishedContentType GetModelContentType()
+			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.2")]
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Asd, TValue>> selector)
+			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+#pragma warning restore 0109
+
+		// ctor
+		public Asd(IPublishedContent content)
+			: base(content)
+		{ }
+
+		// properties
+
+		///<summary>
+		/// LinkTESTER
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.2")]
+		[ImplementPropertyType("linkTESTER")]
+		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent LinkTester => this.Value<global::Umbraco.Core.Models.PublishedContent.IPublishedContent>("linkTESTER");
+	}
+
 	/// <summary>Folder</summary>
 	[PublishedModel("Folder")]
 	public partial class Folder : PublishedContentModel
@@ -1055,6 +1128,13 @@ namespace Umbraco.Web.PublishedModels
 		{ }
 
 		// properties
+
+		///<summary>
+		/// Link: link to site
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.2")]
+		[ImplementPropertyType("link")]
+		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent Link => this.Value<global::Umbraco.Core.Models.PublishedContent.IPublishedContent>("link");
 
 		///<summary>
 		/// Size: in bytes
@@ -1116,6 +1196,13 @@ namespace Umbraco.Web.PublishedModels
 		{ }
 
 		// properties
+
+		///<summary>
+		/// Link
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.5.2")]
+		[ImplementPropertyType("link")]
+		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent Link => this.Value<global::Umbraco.Core.Models.PublishedContent.IPublishedContent>("link");
 
 		///<summary>
 		/// Size: in bytes
