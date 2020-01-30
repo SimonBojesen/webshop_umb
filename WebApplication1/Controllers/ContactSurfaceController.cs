@@ -2,6 +2,7 @@
 using Umbraco.Web.Mvc;
 using System.Web.Mvc;
 using System.Net.Mail;
+using System.Net;
 
 namespace WebApplication1.Controllers
 {
@@ -31,8 +32,10 @@ namespace WebApplication1.Controllers
             MailMessage message = new MailMessage(model.EmailAddress, "987test32123@gmail.com");
             message.Subject = string.Format("Enquiry from {0} {1} - {2}", model.FirstName, model.LastName, model.EmailAddress);
             message.Body = model.Message;
-            SmtpClient client = new SmtpClient("127.0.0.1", 25);
+            SmtpClient client = new SmtpClient();
+
             client.Send(message);
+            
         }
     }
 }
